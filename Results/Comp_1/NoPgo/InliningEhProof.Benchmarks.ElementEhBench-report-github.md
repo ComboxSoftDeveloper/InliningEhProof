@@ -1,0 +1,52 @@
+```
+
+BenchmarkDotNet v0.15.8, Windows 10 (10.0.17763.3165/1809/October2018Update/Redstone5)
+AMD Ryzen 9 5950X 3.39GHz, 1 CPU, 32 logical and 16 physical cores
+.NET SDK 11.0.100-preview.5.26302.115
+  [Host]    : .NET 10.0.5 (10.0.5, 10.0.526.15411), X64 RyuJIT x86-64-v3
+  .NET 10.0 : .NET 10.0.5 (10.0.5, 10.0.526.15411), X64 RyuJIT x86-64-v3
+  .NET 8.0  : .NET 8.0.29 (8.0.29, 8.0.2926.32403), X64 RyuJIT x86-64-v3
+  .NET 9.0  : .NET 9.0.18 (9.0.18, 9.0.1826.31522), X64 RyuJIT x86-64-v3
+
+
+```
+| Method                 | Job       | Runtime   | Elements | Mean       | Error     | StdDev    | Ratio | RatioSD | Allocated | Alloc Ratio |
+|----------------------- |---------- |---------- |--------- |-----------:|----------:|----------:|------:|--------:|----------:|------------:|
+| **Element_Finally**        | **.NET 10.0** | **.NET 10.0** | **4**        |   **7.497 ns** | **0.0383 ns** | **0.0339 ns** |  **1.00** |    **0.01** |         **-** |          **NA** |
+| Element_Plain          | .NET 10.0 | .NET 10.0 | 4        |   1.376 ns | 0.0233 ns | 0.0194 ns |  0.18 |    0.00 |         - |          NA |
+| Element_FinallyBlocked | .NET 10.0 | .NET 10.0 | 4        |   7.339 ns | 0.1208 ns | 0.1130 ns |  0.98 |    0.02 |         - |          NA |
+| Element_PlainBlocked   | .NET 10.0 | .NET 10.0 | 4        |   5.613 ns | 0.0246 ns | 0.0218 ns |  0.75 |    0.00 |         - |          NA |
+| Element_Finally        | .NET 8.0  | .NET 8.0  | 4        |   6.010 ns | 0.0519 ns | 0.0433 ns |  0.80 |    0.01 |         - |          NA |
+| Element_Plain          | .NET 8.0  | .NET 8.0  | 4        |   1.259 ns | 0.0121 ns | 0.0113 ns |  0.17 |    0.00 |         - |          NA |
+| Element_FinallyBlocked | .NET 8.0  | .NET 8.0  | 4        |   6.006 ns | 0.0454 ns | 0.0403 ns |  0.80 |    0.01 |         - |          NA |
+| Element_PlainBlocked   | .NET 8.0  | .NET 8.0  | 4        |   5.057 ns | 0.0462 ns | 0.0409 ns |  0.67 |    0.01 |         - |          NA |
+| Element_Finally        | .NET 9.0  | .NET 9.0  | 4        |   7.455 ns | 0.0474 ns | 0.0370 ns |  0.99 |    0.01 |         - |          NA |
+| Element_Plain          | .NET 9.0  | .NET 9.0  | 4        |   1.350 ns | 0.0168 ns | 0.0149 ns |  0.18 |    0.00 |         - |          NA |
+| Element_FinallyBlocked | .NET 9.0  | .NET 9.0  | 4        |   7.453 ns | 0.0401 ns | 0.0355 ns |  0.99 |    0.01 |         - |          NA |
+| Element_PlainBlocked   | .NET 9.0  | .NET 9.0  | 4        |   5.605 ns | 0.0403 ns | 0.0357 ns |  0.75 |    0.01 |         - |          NA |
+|                        |           |           |          |            |           |           |       |         |           |             |
+| **Element_Finally**        | **.NET 10.0** | **.NET 10.0** | **16**       |  **29.189 ns** | **0.1195 ns** | **0.0998 ns** |  **1.00** |    **0.00** |         **-** |          **NA** |
+| Element_Plain          | .NET 10.0 | .NET 10.0 | 16       |   6.333 ns | 0.0360 ns | 0.0337 ns |  0.22 |    0.00 |         - |          NA |
+| Element_FinallyBlocked | .NET 10.0 | .NET 10.0 | 16       |  29.501 ns | 0.4856 ns | 0.4542 ns |  1.01 |    0.02 |         - |          NA |
+| Element_PlainBlocked   | .NET 10.0 | .NET 10.0 | 16       |  22.277 ns | 0.0388 ns | 0.0324 ns |  0.76 |    0.00 |         - |          NA |
+| Element_Finally        | .NET 8.0  | .NET 8.0  | 16       |  23.027 ns | 0.1526 ns | 0.1274 ns |  0.79 |    0.00 |         - |          NA |
+| Element_Plain          | .NET 8.0  | .NET 8.0  | 16       |   4.976 ns | 0.0193 ns | 0.0181 ns |  0.17 |    0.00 |         - |          NA |
+| Element_FinallyBlocked | .NET 8.0  | .NET 8.0  | 16       |  22.886 ns | 0.0649 ns | 0.0576 ns |  0.78 |    0.00 |         - |          NA |
+| Element_PlainBlocked   | .NET 8.0  | .NET 8.0  | 16       |  19.187 ns | 0.0501 ns | 0.0469 ns |  0.66 |    0.00 |         - |          NA |
+| Element_Finally        | .NET 9.0  | .NET 9.0  | 16       |  29.467 ns | 0.2235 ns | 0.1982 ns |  1.01 |    0.01 |         - |          NA |
+| Element_Plain          | .NET 9.0  | .NET 9.0  | 16       |   7.499 ns | 0.0353 ns | 0.0330 ns |  0.26 |    0.00 |         - |          NA |
+| Element_FinallyBlocked | .NET 9.0  | .NET 9.0  | 16       |  29.519 ns | 0.2452 ns | 0.2294 ns |  1.01 |    0.01 |         - |          NA |
+| Element_PlainBlocked   | .NET 9.0  | .NET 9.0  | 16       |  22.274 ns | 0.0740 ns | 0.0656 ns |  0.76 |    0.00 |         - |          NA |
+|                        |           |           |          |            |           |           |       |         |           |             |
+| **Element_Finally**        | **.NET 10.0** | **.NET 10.0** | **64**       | **118.076 ns** | **0.4080 ns** | **0.3817 ns** |  **1.00** |    **0.00** |         **-** |          **NA** |
+| Element_Plain          | .NET 10.0 | .NET 10.0 | 64       |  23.043 ns | 0.1396 ns | 0.1237 ns |  0.20 |    0.00 |         - |          NA |
+| Element_FinallyBlocked | .NET 10.0 | .NET 10.0 | 64       | 117.571 ns | 0.4336 ns | 0.4056 ns |  1.00 |    0.00 |         - |          NA |
+| Element_PlainBlocked   | .NET 10.0 | .NET 10.0 | 64       |  88.476 ns | 0.2620 ns | 0.2188 ns |  0.75 |    0.00 |         - |          NA |
+| Element_Finally        | .NET 8.0  | .NET 8.0  | 64       |  89.507 ns | 0.2930 ns | 0.2446 ns |  0.76 |    0.00 |         - |          NA |
+| Element_Plain          | .NET 8.0  | .NET 8.0  | 64       |  19.941 ns | 0.0565 ns | 0.0472 ns |  0.17 |    0.00 |         - |          NA |
+| Element_FinallyBlocked | .NET 8.0  | .NET 8.0  | 64       |  89.469 ns | 0.3520 ns | 0.2748 ns |  0.76 |    0.00 |         - |          NA |
+| Element_PlainBlocked   | .NET 8.0  | .NET 8.0  | 64       |  74.467 ns | 0.2044 ns | 0.1812 ns |  0.63 |    0.00 |         - |          NA |
+| Element_Finally        | .NET 9.0  | .NET 9.0  | 64       | 118.020 ns | 0.4800 ns | 0.4009 ns |  1.00 |    0.00 |         - |          NA |
+| Element_Plain          | .NET 9.0  | .NET 9.0  | 64       |  21.248 ns | 0.0604 ns | 0.0565 ns |  0.18 |    0.00 |         - |          NA |
+| Element_FinallyBlocked | .NET 9.0  | .NET 9.0  | 64       | 118.340 ns | 1.2478 ns | 0.9742 ns |  1.00 |    0.01 |         - |          NA |
+| Element_PlainBlocked   | .NET 9.0  | .NET 9.0  | 64       |  88.418 ns | 0.2688 ns | 0.2515 ns |  0.75 |    0.00 |         - |          NA |

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>InliningEhProof.Benchmarks.GuardEhBench-20260806-142233</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.15.8, Windows 10 (10.0.20348.5386)
+Intel Xeon Silver 4314 CPU 2.40GHz, 2 CPU, 64 logical and 32 physical cores
+.NET SDK 11.0.100-preview.5.26302.115
+  [Host]    : .NET 10.0.1 (10.0.1, 10.0.125.57005), X64 RyuJIT x86-64-v4
+  .NET 10.0 : .NET 10.0.1 (10.0.1, 10.0.125.57005), X64 RyuJIT x86-64-v4
+  .NET 8.0  : .NET 8.0.16 (8.0.16, 8.0.1625.21506), X64 RyuJIT x86-64-v4
+  .NET 9.0  : .NET 9.0.5 (9.0.5, 9.0.525.21509), X64 RyuJIT x86-64-v4
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method        </th><th>Job</th><th>Runtime</th><th>Elements</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Ratio</th><th>RatioSD</th><th>Allocated</th><th>Alloc Ratio</th>
+</tr>
+</thead><tbody><tr><td>Guard_Finally</td><td>.NET 10.0</td><td>.NET 10.0</td><td>4</td><td>8.724 ns</td><td>0.0556 ns</td><td>0.0493 ns</td><td>1.00</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_Plain</td><td>.NET 10.0</td><td>.NET 10.0</td><td>4</td><td>8.282 ns</td><td>0.0689 ns</td><td>0.0644 ns</td><td>0.95</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_FinallyBlocked</td><td>.NET 10.0</td><td>.NET 10.0</td><td>4</td><td>8.863 ns</td><td>0.0770 ns</td><td>0.0720 ns</td><td>1.02</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_PlainBlocked</td><td>.NET 10.0</td><td>.NET 10.0</td><td>4</td><td>8.072 ns</td><td>0.0330 ns</td><td>0.0293 ns</td><td>0.93</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_Finally</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>8.861 ns</td><td>0.0635 ns</td><td>0.0563 ns</td><td>1.02</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_Plain</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>7.234 ns</td><td>0.0637 ns</td><td>0.0596 ns</td><td>0.83</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_FinallyBlocked</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>8.924 ns</td><td>0.0566 ns</td><td>0.0502 ns</td><td>1.02</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_PlainBlocked</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>7.419 ns</td><td>0.0837 ns</td><td>0.0783 ns</td><td>0.85</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_Finally</td><td>.NET 9.0</td><td>.NET 9.0</td><td>4</td><td>8.692 ns</td><td>0.0822 ns</td><td>0.0729 ns</td><td>1.00</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_Plain</td><td>.NET 9.0</td><td>.NET 9.0</td><td>4</td><td>7.194 ns</td><td>0.0419 ns</td><td>0.0372 ns</td><td>0.82</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_FinallyBlocked</td><td>.NET 9.0</td><td>.NET 9.0</td><td>4</td><td>8.593 ns</td><td>0.0802 ns</td><td>0.0711 ns</td><td>0.98</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_PlainBlocked</td><td>.NET 9.0</td><td>.NET 9.0</td><td>4</td><td>7.249 ns</td><td>0.0631 ns</td><td>0.0590 ns</td><td>0.83</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_Finally</td><td>.NET 10.0</td><td>.NET 10.0</td><td>16</td><td>30.495 ns</td><td>0.2907 ns</td><td>0.2577 ns</td><td>1.00</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_Plain</td><td>.NET 10.0</td><td>.NET 10.0</td><td>16</td><td>29.846 ns</td><td>0.2394 ns</td><td>0.1999 ns</td><td>0.98</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_FinallyBlocked</td><td>.NET 10.0</td><td>.NET 10.0</td><td>16</td><td>37.663 ns</td><td>0.2012 ns</td><td>0.1784 ns</td><td>1.24</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_PlainBlocked</td><td>.NET 10.0</td><td>.NET 10.0</td><td>16</td><td>29.925 ns</td><td>0.2197 ns</td><td>0.2055 ns</td><td>0.98</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_Finally</td><td>.NET 8.0</td><td>.NET 8.0</td><td>16</td><td>30.877 ns</td><td>0.2399 ns</td><td>0.2244 ns</td><td>1.01</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_Plain</td><td>.NET 8.0</td><td>.NET 8.0</td><td>16</td><td>24.611 ns</td><td>0.1296 ns</td><td>0.1212 ns</td><td>0.81</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_FinallyBlocked</td><td>.NET 8.0</td><td>.NET 8.0</td><td>16</td><td>30.185 ns</td><td>0.1992 ns</td><td>0.1766 ns</td><td>0.99</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_PlainBlocked</td><td>.NET 8.0</td><td>.NET 8.0</td><td>16</td><td>24.861 ns</td><td>0.2778 ns</td><td>0.2462 ns</td><td>0.82</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_Finally</td><td>.NET 9.0</td><td>.NET 9.0</td><td>16</td><td>30.677 ns</td><td>0.2610 ns</td><td>0.2180 ns</td><td>1.01</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_Plain</td><td>.NET 9.0</td><td>.NET 9.0</td><td>16</td><td>25.179 ns</td><td>0.1197 ns</td><td>0.1061 ns</td><td>0.83</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_FinallyBlocked</td><td>.NET 9.0</td><td>.NET 9.0</td><td>16</td><td>30.748 ns</td><td>0.2108 ns</td><td>0.1869 ns</td><td>1.01</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_PlainBlocked</td><td>.NET 9.0</td><td>.NET 9.0</td><td>16</td><td>24.776 ns</td><td>0.1348 ns</td><td>0.1126 ns</td><td>0.81</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_Finally</td><td>.NET 10.0</td><td>.NET 10.0</td><td>64</td><td>145.091 ns</td><td>1.1118 ns</td><td>1.0399 ns</td><td>1.00</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_Plain</td><td>.NET 10.0</td><td>.NET 10.0</td><td>64</td><td>113.328 ns</td><td>0.4372 ns</td><td>0.3875 ns</td><td>0.78</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_FinallyBlocked</td><td>.NET 10.0</td><td>.NET 10.0</td><td>64</td><td>125.763 ns</td><td>1.1882 ns</td><td>1.0533 ns</td><td>0.87</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_PlainBlocked</td><td>.NET 10.0</td><td>.NET 10.0</td><td>64</td><td>115.351 ns</td><td>0.7481 ns</td><td>0.6998 ns</td><td>0.80</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_Finally</td><td>.NET 8.0</td><td>.NET 8.0</td><td>64</td><td>128.716 ns</td><td>1.2969 ns</td><td>1.1497 ns</td><td>0.89</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_Plain</td><td>.NET 8.0</td><td>.NET 8.0</td><td>64</td><td>105.100 ns</td><td>0.5501 ns</td><td>0.5146 ns</td><td>0.72</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_FinallyBlocked</td><td>.NET 8.0</td><td>.NET 8.0</td><td>64</td><td>126.577 ns</td><td>0.3748 ns</td><td>0.3323 ns</td><td>0.87</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_PlainBlocked</td><td>.NET 8.0</td><td>.NET 8.0</td><td>64</td><td>105.903 ns</td><td>0.6469 ns</td><td>0.5734 ns</td><td>0.73</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_Finally</td><td>.NET 9.0</td><td>.NET 9.0</td><td>64</td><td>127.049 ns</td><td>0.5710 ns</td><td>0.4768 ns</td><td>0.88</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_Plain</td><td>.NET 9.0</td><td>.NET 9.0</td><td>64</td><td>106.181 ns</td><td>0.5968 ns</td><td>0.5582 ns</td><td>0.73</td><td>0.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_FinallyBlocked</td><td>.NET 9.0</td><td>.NET 9.0</td><td>64</td><td>130.839 ns</td><td>2.5347 ns</td><td>2.3710 ns</td><td>0.90</td><td>0.02</td><td>-</td><td>NA</td>
+</tr><tr><td>Guard_PlainBlocked</td><td>.NET 9.0</td><td>.NET 9.0</td><td>64</td><td>106.507 ns</td><td>1.2189 ns</td><td>1.1401 ns</td><td>0.73</td><td>0.01</td><td>-</td><td>NA</td>
+</tr></tbody></table>
+</body>
+</html>

@@ -1,0 +1,2027 @@
+=== Рантайм ===
+Runtime: 9.0.18
+
+; Assembly listing for method InliningEhProof.Subjects:CallElementFinally(int[]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; partially interruptible
+
+G_M000_IG01:
+       push     rbp
+       sub      rsp, 112
+       lea      rbp, [rsp+0x70]
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       xor      eax, eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      dword ptr [rbp-0x48], 0x3E8
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp+0x10]
+       mov      edx, dword ptr [rbp-0x40]
+       call     [InliningEhProof.Subjects:ElementFinally(int[],int):int]
+       add      eax, dword ptr [rbp-0x3C]
+       mov      dword ptr [rbp-0x3C], eax
+       mov      eax, dword ptr [rbp-0x40]
+       inc      eax
+       mov      dword ptr [rbp-0x40], eax
+ 
+G_M000_IG04:
+       mov      eax, dword ptr [rbp-0x48]
+       dec      eax
+       mov      dword ptr [rbp-0x48], eax
+       cmp      dword ptr [rbp-0x48], 0
+       jg       SHORT G_M000_IG06
+ 
+G_M000_IG05:
+       lea      rcx, [rbp-0x48]
+       mov      edx, 20
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG06:
+       mov      rax, gword ptr [rbp+0x10]
+       mov      eax, dword ptr [rax+0x08]
+       cmp      eax, dword ptr [rbp-0x40]
+       jg       SHORT G_M000_IG03
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG07:
+       add      rsp, 112
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 147
+
+; Assembly listing for method InliningEhProof.Subjects:CallElementPlain(int[]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; partially interruptible
+
+G_M000_IG01:
+       push     rbp
+       sub      rsp, 112
+       lea      rbp, [rsp+0x70]
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       xor      eax, eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      dword ptr [rbp-0x48], 0x3E8
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp+0x10]
+       mov      edx, dword ptr [rbp-0x40]
+       call     [InliningEhProof.Subjects:ElementPlain(int[],int):int]
+       add      eax, dword ptr [rbp-0x3C]
+       mov      dword ptr [rbp-0x3C], eax
+       mov      eax, dword ptr [rbp-0x40]
+       inc      eax
+       mov      dword ptr [rbp-0x40], eax
+ 
+G_M000_IG04:
+       mov      eax, dword ptr [rbp-0x48]
+       dec      eax
+       mov      dword ptr [rbp-0x48], eax
+       cmp      dword ptr [rbp-0x48], 0
+       jg       SHORT G_M000_IG06
+ 
+G_M000_IG05:
+       lea      rcx, [rbp-0x48]
+       mov      edx, 20
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG06:
+       mov      rax, gword ptr [rbp+0x10]
+       mov      eax, dword ptr [rax+0x08]
+       cmp      eax, dword ptr [rbp-0x40]
+       jg       SHORT G_M000_IG03
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG07:
+       add      rsp, 112
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 147
+
+; Assembly listing for method InliningEhProof.Subjects:CallElementFinallyBlocked(int[]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; partially interruptible
+
+G_M000_IG01:
+       push     rbp
+       sub      rsp, 112
+       lea      rbp, [rsp+0x70]
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       xor      eax, eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      dword ptr [rbp-0x48], 0x3E8
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp+0x10]
+       mov      edx, dword ptr [rbp-0x40]
+       call     [InliningEhProof.Subjects:ElementFinallyBlocked(int[],int):int]
+       add      eax, dword ptr [rbp-0x3C]
+       mov      dword ptr [rbp-0x3C], eax
+       mov      eax, dword ptr [rbp-0x40]
+       inc      eax
+       mov      dword ptr [rbp-0x40], eax
+ 
+G_M000_IG04:
+       mov      eax, dword ptr [rbp-0x48]
+       dec      eax
+       mov      dword ptr [rbp-0x48], eax
+       cmp      dword ptr [rbp-0x48], 0
+       jg       SHORT G_M000_IG06
+ 
+G_M000_IG05:
+       lea      rcx, [rbp-0x48]
+       mov      edx, 20
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG06:
+       mov      rax, gword ptr [rbp+0x10]
+       mov      eax, dword ptr [rax+0x08]
+       cmp      eax, dword ptr [rbp-0x40]
+       jg       SHORT G_M000_IG03
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG07:
+       add      rsp, 112
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 147
+
+; Assembly listing for method InliningEhProof.Subjects:CallElementPlainBlocked(int[]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; partially interruptible
+
+G_M000_IG01:
+       push     rbp
+       sub      rsp, 112
+       lea      rbp, [rsp+0x70]
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       xor      eax, eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      dword ptr [rbp-0x48], 0x3E8
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp+0x10]
+       mov      edx, dword ptr [rbp-0x40]
+       call     [InliningEhProof.Subjects:ElementPlainBlocked(int[],int):int]
+       add      eax, dword ptr [rbp-0x3C]
+       mov      dword ptr [rbp-0x3C], eax
+       mov      eax, dword ptr [rbp-0x40]
+       inc      eax
+       mov      dword ptr [rbp-0x40], eax
+ 
+G_M000_IG04:
+       mov      eax, dword ptr [rbp-0x48]
+       dec      eax
+       mov      dword ptr [rbp-0x48], eax
+       cmp      dword ptr [rbp-0x48], 0
+       jg       SHORT G_M000_IG06
+ 
+G_M000_IG05:
+       lea      rcx, [rbp-0x48]
+       mov      edx, 20
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG06:
+       mov      rax, gword ptr [rbp+0x10]
+       mov      eax, dword ptr [rax+0x08]
+       cmp      eax, dword ptr [rbp-0x40]
+       jg       SHORT G_M000_IG03
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG07:
+       add      rsp, 112
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 147
+
+; Assembly listing for method InliningEhProof.Subjects:CallElementGuardFinally(int[]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; partially interruptible
+
+G_M000_IG01:
+       push     rbp
+       sub      rsp, 112
+       lea      rbp, [rsp+0x70]
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       xor      eax, eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      dword ptr [rbp-0x48], 0x3E8
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp+0x10]
+       mov      edx, dword ptr [rbp-0x40]
+       call     [InliningEhProof.Subjects:ElementGuardFinally(int[],int):int]
+       add      eax, dword ptr [rbp-0x3C]
+       mov      dword ptr [rbp-0x3C], eax
+       mov      eax, dword ptr [rbp-0x40]
+       inc      eax
+       mov      dword ptr [rbp-0x40], eax
+ 
+G_M000_IG04:
+       mov      eax, dword ptr [rbp-0x48]
+       dec      eax
+       mov      dword ptr [rbp-0x48], eax
+       cmp      dword ptr [rbp-0x48], 0
+       jg       SHORT G_M000_IG06
+ 
+G_M000_IG05:
+       lea      rcx, [rbp-0x48]
+       mov      edx, 20
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG06:
+       mov      rax, gword ptr [rbp+0x10]
+       mov      eax, dword ptr [rax+0x08]
+       cmp      eax, dword ptr [rbp-0x40]
+       jg       SHORT G_M000_IG03
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG07:
+       add      rsp, 112
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 147
+
+; Assembly listing for method InliningEhProof.Subjects:CallElementGuardPlain(int[]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; partially interruptible
+
+G_M000_IG01:
+       push     rbp
+       sub      rsp, 112
+       lea      rbp, [rsp+0x70]
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       xor      eax, eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      dword ptr [rbp-0x48], 0x3E8
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp+0x10]
+       mov      edx, dword ptr [rbp-0x40]
+       call     [InliningEhProof.Subjects:ElementGuardPlain(int[],int):int]
+       add      eax, dword ptr [rbp-0x3C]
+       mov      dword ptr [rbp-0x3C], eax
+       mov      eax, dword ptr [rbp-0x40]
+       inc      eax
+       mov      dword ptr [rbp-0x40], eax
+ 
+G_M000_IG04:
+       mov      eax, dword ptr [rbp-0x48]
+       dec      eax
+       mov      dword ptr [rbp-0x48], eax
+       cmp      dword ptr [rbp-0x48], 0
+       jg       SHORT G_M000_IG06
+ 
+G_M000_IG05:
+       lea      rcx, [rbp-0x48]
+       mov      edx, 20
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG06:
+       mov      rax, gword ptr [rbp+0x10]
+       mov      eax, dword ptr [rax+0x08]
+       cmp      eax, dword ptr [rbp-0x40]
+       jg       SHORT G_M000_IG03
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG07:
+       add      rsp, 112
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 147
+
+; Assembly listing for method InliningEhProof.Subjects:CallElementGuardFinallyBlocked(int[]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; partially interruptible
+
+G_M000_IG01:
+       push     rbp
+       sub      rsp, 112
+       lea      rbp, [rsp+0x70]
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       xor      eax, eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      dword ptr [rbp-0x48], 0x3E8
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp+0x10]
+       mov      edx, dword ptr [rbp-0x40]
+       call     [InliningEhProof.Subjects:ElementGuardFinallyBlocked(int[],int):int]
+       add      eax, dword ptr [rbp-0x3C]
+       mov      dword ptr [rbp-0x3C], eax
+       mov      eax, dword ptr [rbp-0x40]
+       inc      eax
+       mov      dword ptr [rbp-0x40], eax
+ 
+G_M000_IG04:
+       mov      eax, dword ptr [rbp-0x48]
+       dec      eax
+       mov      dword ptr [rbp-0x48], eax
+       cmp      dword ptr [rbp-0x48], 0
+       jg       SHORT G_M000_IG06
+ 
+G_M000_IG05:
+       lea      rcx, [rbp-0x48]
+       mov      edx, 20
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG06:
+       mov      rax, gword ptr [rbp+0x10]
+       mov      eax, dword ptr [rax+0x08]
+       cmp      eax, dword ptr [rbp-0x40]
+       jg       SHORT G_M000_IG03
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG07:
+       add      rsp, 112
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 147
+
+; Assembly listing for method InliningEhProof.Subjects:CallElementGuardPlainBlocked(int[]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; partially interruptible
+
+G_M000_IG01:
+       push     rbp
+       sub      rsp, 112
+       lea      rbp, [rsp+0x70]
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       xor      eax, eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      dword ptr [rbp-0x48], 0x3E8
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp+0x10]
+       mov      edx, dword ptr [rbp-0x40]
+       call     [InliningEhProof.Subjects:ElementGuardPlainBlocked(int[],int):int]
+       add      eax, dword ptr [rbp-0x3C]
+       mov      dword ptr [rbp-0x3C], eax
+       mov      eax, dword ptr [rbp-0x40]
+       inc      eax
+       mov      dword ptr [rbp-0x40], eax
+ 
+G_M000_IG04:
+       mov      eax, dword ptr [rbp-0x48]
+       dec      eax
+       mov      dword ptr [rbp-0x48], eax
+       cmp      dword ptr [rbp-0x48], 0
+       jg       SHORT G_M000_IG06
+ 
+G_M000_IG05:
+       lea      rcx, [rbp-0x48]
+       mov      edx, 20
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG06:
+       mov      rax, gword ptr [rbp+0x10]
+       mov      eax, dword ptr [rax+0x08]
+       cmp      eax, dword ptr [rbp-0x40]
+       jg       SHORT G_M000_IG03
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG07:
+       add      rsp, 112
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 147
+
+; Assembly listing for method InliningEhProof.Subjects:CallListForeach(System.Collections.Generic.List`1[int]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; partially interruptible
+
+G_M000_IG01:
+       push     rbp
+       sub      rsp, 112
+       lea      rbp, [rsp+0x70]
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       xor      eax, eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      dword ptr [rbp-0x48], 0x3E8
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp+0x10]
+       call     [InliningEhProof.Subjects:ListForeach(System.Collections.Generic.List`1[int]):int]
+       add      eax, dword ptr [rbp-0x3C]
+       mov      dword ptr [rbp-0x3C], eax
+       mov      eax, dword ptr [rbp-0x40]
+       inc      eax
+       mov      dword ptr [rbp-0x40], eax
+ 
+G_M000_IG04:
+       mov      eax, dword ptr [rbp-0x48]
+       dec      eax
+       mov      dword ptr [rbp-0x48], eax
+       cmp      dword ptr [rbp-0x48], 0
+       jg       SHORT G_M000_IG06
+ 
+G_M000_IG05:
+       lea      rcx, [rbp-0x48]
+       mov      edx, 19
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG06:
+       cmp      dword ptr [rbp-0x40], 64
+       jl       SHORT G_M000_IG03
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG07:
+       add      rsp, 112
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 138
+
+; Assembly listing for method InliningEhProof.Subjects:CallListManual(System.Collections.Generic.List`1[int]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; partially interruptible
+
+G_M000_IG01:
+       push     rbp
+       sub      rsp, 112
+       lea      rbp, [rsp+0x70]
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       xor      eax, eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      dword ptr [rbp-0x48], 0x3E8
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp+0x10]
+       call     [InliningEhProof.Subjects:ListManual(System.Collections.Generic.List`1[int]):int]
+       add      eax, dword ptr [rbp-0x3C]
+       mov      dword ptr [rbp-0x3C], eax
+       mov      eax, dword ptr [rbp-0x40]
+       inc      eax
+       mov      dword ptr [rbp-0x40], eax
+ 
+G_M000_IG04:
+       mov      eax, dword ptr [rbp-0x48]
+       dec      eax
+       mov      dword ptr [rbp-0x48], eax
+       cmp      dword ptr [rbp-0x48], 0
+       jg       SHORT G_M000_IG06
+ 
+G_M000_IG05:
+       lea      rcx, [rbp-0x48]
+       mov      edx, 19
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG06:
+       cmp      dword ptr [rbp-0x40], 64
+       jl       SHORT G_M000_IG03
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG07:
+       add      rsp, 112
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 138
+
+; Assembly listing for method InliningEhProof.Subjects:CallListForeachBlocked(System.Collections.Generic.List`1[int]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; partially interruptible
+
+G_M000_IG01:
+       push     rbp
+       sub      rsp, 112
+       lea      rbp, [rsp+0x70]
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       xor      eax, eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      dword ptr [rbp-0x48], 0x3E8
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp+0x10]
+       call     [InliningEhProof.Subjects:ListForeachBlocked(System.Collections.Generic.List`1[int]):int]
+       add      eax, dword ptr [rbp-0x3C]
+       mov      dword ptr [rbp-0x3C], eax
+       mov      eax, dword ptr [rbp-0x40]
+       inc      eax
+       mov      dword ptr [rbp-0x40], eax
+ 
+G_M000_IG04:
+       mov      eax, dword ptr [rbp-0x48]
+       dec      eax
+       mov      dword ptr [rbp-0x48], eax
+       cmp      dword ptr [rbp-0x48], 0
+       jg       SHORT G_M000_IG06
+ 
+G_M000_IG05:
+       lea      rcx, [rbp-0x48]
+       mov      edx, 19
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG06:
+       cmp      dword ptr [rbp-0x40], 64
+       jl       SHORT G_M000_IG03
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG07:
+       add      rsp, 112
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 138
+
+; Assembly listing for method InliningEhProof.Subjects:CallListManualBlocked(System.Collections.Generic.List`1[int]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; partially interruptible
+
+G_M000_IG01:
+       push     rbp
+       sub      rsp, 112
+       lea      rbp, [rsp+0x70]
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       xor      eax, eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      dword ptr [rbp-0x48], 0x3E8
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp+0x10]
+       call     [InliningEhProof.Subjects:ListManualBlocked(System.Collections.Generic.List`1[int]):int]
+       add      eax, dword ptr [rbp-0x3C]
+       mov      dword ptr [rbp-0x3C], eax
+       mov      eax, dword ptr [rbp-0x40]
+       inc      eax
+       mov      dword ptr [rbp-0x40], eax
+ 
+G_M000_IG04:
+       mov      eax, dword ptr [rbp-0x48]
+       dec      eax
+       mov      dword ptr [rbp-0x48], eax
+       cmp      dword ptr [rbp-0x48], 0
+       jg       SHORT G_M000_IG06
+ 
+G_M000_IG05:
+       lea      rcx, [rbp-0x48]
+       mov      edx, 19
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG06:
+       cmp      dword ptr [rbp-0x40], 64
+       jl       SHORT G_M000_IG03
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG07:
+       add      rsp, 112
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 138
+
+; Assembly listing for method InliningEhProof.Subjects:CallElementFinally(int[]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; partially interruptible
+
+G_M000_IG01:
+       push     rbp
+       sub      rsp, 112
+       lea      rbp, [rsp+0x70]
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       xor      eax, eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      dword ptr [rbp-0x48], 0x3E8
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp+0x10]
+       mov      edx, dword ptr [rbp-0x40]
+       call     [InliningEhProof.Subjects:ElementFinally(int[],int):int]
+       add      eax, dword ptr [rbp-0x3C]
+       mov      dword ptr [rbp-0x3C], eax
+       mov      eax, dword ptr [rbp-0x40]
+       inc      eax
+       mov      dword ptr [rbp-0x40], eax
+ 
+G_M000_IG04:
+       mov      eax, dword ptr [rbp-0x48]
+       dec      eax
+       mov      dword ptr [rbp-0x48], eax
+       cmp      dword ptr [rbp-0x48], 0
+       jg       SHORT G_M000_IG06
+ 
+G_M000_IG05:
+       lea      rcx, [rbp-0x48]
+       mov      edx, 20
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG06:
+       mov      rax, gword ptr [rbp+0x10]
+       mov      eax, dword ptr [rax+0x08]
+       cmp      eax, dword ptr [rbp-0x40]
+       jg       SHORT G_M000_IG03
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG07:
+       add      rsp, 112
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 147
+
+; Assembly listing for method InliningEhProof.Subjects:CallElementPlain(int[]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; partially interruptible
+
+G_M000_IG01:
+       push     rbp
+       sub      rsp, 112
+       lea      rbp, [rsp+0x70]
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       xor      eax, eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      dword ptr [rbp-0x48], 0x3E8
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp+0x10]
+       mov      edx, dword ptr [rbp-0x40]
+       call     [InliningEhProof.Subjects:ElementPlain(int[],int):int]
+       add      eax, dword ptr [rbp-0x3C]
+       mov      dword ptr [rbp-0x3C], eax
+       mov      eax, dword ptr [rbp-0x40]
+       inc      eax
+       mov      dword ptr [rbp-0x40], eax
+ 
+G_M000_IG04:
+       mov      eax, dword ptr [rbp-0x48]
+       dec      eax
+       mov      dword ptr [rbp-0x48], eax
+       cmp      dword ptr [rbp-0x48], 0
+       jg       SHORT G_M000_IG06
+ 
+G_M000_IG05:
+       lea      rcx, [rbp-0x48]
+       mov      edx, 20
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG06:
+       mov      rax, gword ptr [rbp+0x10]
+       mov      eax, dword ptr [rax+0x08]
+       cmp      eax, dword ptr [rbp-0x40]
+       jg       SHORT G_M000_IG03
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG07:
+       add      rsp, 112
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 147
+
+; Assembly listing for method InliningEhProof.Subjects:CallElementFinallyBlocked(int[]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; partially interruptible
+
+G_M000_IG01:
+       push     rbp
+       sub      rsp, 112
+       lea      rbp, [rsp+0x70]
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       xor      eax, eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      dword ptr [rbp-0x48], 0x3E8
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp+0x10]
+       mov      edx, dword ptr [rbp-0x40]
+       call     [InliningEhProof.Subjects:ElementFinallyBlocked(int[],int):int]
+       add      eax, dword ptr [rbp-0x3C]
+       mov      dword ptr [rbp-0x3C], eax
+       mov      eax, dword ptr [rbp-0x40]
+       inc      eax
+       mov      dword ptr [rbp-0x40], eax
+ 
+G_M000_IG04:
+       mov      eax, dword ptr [rbp-0x48]
+       dec      eax
+       mov      dword ptr [rbp-0x48], eax
+       cmp      dword ptr [rbp-0x48], 0
+       jg       SHORT G_M000_IG06
+ 
+G_M000_IG05:
+       lea      rcx, [rbp-0x48]
+       mov      edx, 20
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG06:
+       mov      rax, gword ptr [rbp+0x10]
+       mov      eax, dword ptr [rax+0x08]
+       cmp      eax, dword ptr [rbp-0x40]
+       jg       SHORT G_M000_IG03
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG07:
+       add      rsp, 112
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 147
+
+; Assembly listing for method InliningEhProof.Subjects:CallElementPlainBlocked(int[]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; partially interruptible
+
+G_M000_IG01:
+       push     rbp
+       sub      rsp, 112
+       lea      rbp, [rsp+0x70]
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       xor      eax, eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      dword ptr [rbp-0x48], 0x3E8
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp+0x10]
+       mov      edx, dword ptr [rbp-0x40]
+       call     [InliningEhProof.Subjects:ElementPlainBlocked(int[],int):int]
+       add      eax, dword ptr [rbp-0x3C]
+       mov      dword ptr [rbp-0x3C], eax
+       mov      eax, dword ptr [rbp-0x40]
+       inc      eax
+       mov      dword ptr [rbp-0x40], eax
+ 
+G_M000_IG04:
+       mov      eax, dword ptr [rbp-0x48]
+       dec      eax
+       mov      dword ptr [rbp-0x48], eax
+       cmp      dword ptr [rbp-0x48], 0
+       jg       SHORT G_M000_IG06
+ 
+G_M000_IG05:
+       lea      rcx, [rbp-0x48]
+       mov      edx, 20
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG06:
+       mov      rax, gword ptr [rbp+0x10]
+       mov      eax, dword ptr [rax+0x08]
+       cmp      eax, dword ptr [rbp-0x40]
+       jg       SHORT G_M000_IG03
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG07:
+       add      rsp, 112
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 147
+
+; Assembly listing for method InliningEhProof.Subjects:CallElementGuardFinally(int[]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; partially interruptible
+
+G_M000_IG01:
+       push     rbp
+       sub      rsp, 112
+       lea      rbp, [rsp+0x70]
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       xor      eax, eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      dword ptr [rbp-0x48], 0x3E8
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp+0x10]
+       mov      edx, dword ptr [rbp-0x40]
+       call     [InliningEhProof.Subjects:ElementGuardFinally(int[],int):int]
+       add      eax, dword ptr [rbp-0x3C]
+       mov      dword ptr [rbp-0x3C], eax
+       mov      eax, dword ptr [rbp-0x40]
+       inc      eax
+       mov      dword ptr [rbp-0x40], eax
+ 
+G_M000_IG04:
+       mov      eax, dword ptr [rbp-0x48]
+       dec      eax
+       mov      dword ptr [rbp-0x48], eax
+       cmp      dword ptr [rbp-0x48], 0
+       jg       SHORT G_M000_IG06
+ 
+G_M000_IG05:
+       lea      rcx, [rbp-0x48]
+       mov      edx, 20
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG06:
+       mov      rax, gword ptr [rbp+0x10]
+       mov      eax, dword ptr [rax+0x08]
+       cmp      eax, dword ptr [rbp-0x40]
+       jg       SHORT G_M000_IG03
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG07:
+       add      rsp, 112
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 147
+
+; Assembly listing for method InliningEhProof.Subjects:CallElementGuardPlain(int[]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; partially interruptible
+
+G_M000_IG01:
+       push     rbp
+       sub      rsp, 112
+       lea      rbp, [rsp+0x70]
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       xor      eax, eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      dword ptr [rbp-0x48], 0x3E8
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp+0x10]
+       mov      edx, dword ptr [rbp-0x40]
+       call     [InliningEhProof.Subjects:ElementGuardPlain(int[],int):int]
+       add      eax, dword ptr [rbp-0x3C]
+       mov      dword ptr [rbp-0x3C], eax
+       mov      eax, dword ptr [rbp-0x40]
+       inc      eax
+       mov      dword ptr [rbp-0x40], eax
+ 
+G_M000_IG04:
+       mov      eax, dword ptr [rbp-0x48]
+       dec      eax
+       mov      dword ptr [rbp-0x48], eax
+       cmp      dword ptr [rbp-0x48], 0
+       jg       SHORT G_M000_IG06
+ 
+G_M000_IG05:
+       lea      rcx, [rbp-0x48]
+       mov      edx, 20
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG06:
+       mov      rax, gword ptr [rbp+0x10]
+       mov      eax, dword ptr [rax+0x08]
+       cmp      eax, dword ptr [rbp-0x40]
+       jg       SHORT G_M000_IG03
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG07:
+       add      rsp, 112
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 147
+
+; Assembly listing for method InliningEhProof.Subjects:CallElementGuardFinallyBlocked(int[]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; partially interruptible
+
+G_M000_IG01:
+       push     rbp
+       sub      rsp, 112
+       lea      rbp, [rsp+0x70]
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       xor      eax, eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      dword ptr [rbp-0x48], 0x3E8
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp+0x10]
+       mov      edx, dword ptr [rbp-0x40]
+       call     [InliningEhProof.Subjects:ElementGuardFinallyBlocked(int[],int):int]
+       add      eax, dword ptr [rbp-0x3C]
+       mov      dword ptr [rbp-0x3C], eax
+       mov      eax, dword ptr [rbp-0x40]
+       inc      eax
+       mov      dword ptr [rbp-0x40], eax
+ 
+G_M000_IG04:
+       mov      eax, dword ptr [rbp-0x48]
+       dec      eax
+       mov      dword ptr [rbp-0x48], eax
+       cmp      dword ptr [rbp-0x48], 0
+       jg       SHORT G_M000_IG06
+ 
+G_M000_IG05:
+       lea      rcx, [rbp-0x48]
+       mov      edx, 20
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG06:
+       mov      rax, gword ptr [rbp+0x10]
+       mov      eax, dword ptr [rax+0x08]
+       cmp      eax, dword ptr [rbp-0x40]
+       jg       SHORT G_M000_IG03
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG07:
+       add      rsp, 112
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 147
+
+; Assembly listing for method InliningEhProof.Subjects:CallElementGuardPlainBlocked(int[]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; partially interruptible
+
+G_M000_IG01:
+       push     rbp
+       sub      rsp, 112
+       lea      rbp, [rsp+0x70]
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       xor      eax, eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      dword ptr [rbp-0x48], 0x3E8
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp+0x10]
+       mov      edx, dword ptr [rbp-0x40]
+       call     [InliningEhProof.Subjects:ElementGuardPlainBlocked(int[],int):int]
+       add      eax, dword ptr [rbp-0x3C]
+       mov      dword ptr [rbp-0x3C], eax
+       mov      eax, dword ptr [rbp-0x40]
+       inc      eax
+       mov      dword ptr [rbp-0x40], eax
+ 
+G_M000_IG04:
+       mov      eax, dword ptr [rbp-0x48]
+       dec      eax
+       mov      dword ptr [rbp-0x48], eax
+       cmp      dword ptr [rbp-0x48], 0
+       jg       SHORT G_M000_IG06
+ 
+G_M000_IG05:
+       lea      rcx, [rbp-0x48]
+       mov      edx, 20
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG06:
+       mov      rax, gword ptr [rbp+0x10]
+       mov      eax, dword ptr [rax+0x08]
+       cmp      eax, dword ptr [rbp-0x40]
+       jg       SHORT G_M000_IG03
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG07:
+       add      rsp, 112
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 147
+
+; Assembly listing for method InliningEhProof.Subjects:CallListForeach(System.Collections.Generic.List`1[int]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; partially interruptible
+
+G_M000_IG01:
+       push     rbp
+       sub      rsp, 112
+       lea      rbp, [rsp+0x70]
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       xor      eax, eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      dword ptr [rbp-0x48], 0x3E8
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp+0x10]
+       call     [InliningEhProof.Subjects:ListForeach(System.Collections.Generic.List`1[int]):int]
+       add      eax, dword ptr [rbp-0x3C]
+       mov      dword ptr [rbp-0x3C], eax
+       mov      eax, dword ptr [rbp-0x40]
+       inc      eax
+       mov      dword ptr [rbp-0x40], eax
+ 
+G_M000_IG04:
+       mov      eax, dword ptr [rbp-0x48]
+       dec      eax
+       mov      dword ptr [rbp-0x48], eax
+       cmp      dword ptr [rbp-0x48], 0
+       jg       SHORT G_M000_IG06
+ 
+G_M000_IG05:
+       lea      rcx, [rbp-0x48]
+       mov      edx, 19
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG06:
+       cmp      dword ptr [rbp-0x40], 64
+       jl       SHORT G_M000_IG03
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG07:
+       add      rsp, 112
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 138
+
+; Assembly listing for method InliningEhProof.Subjects:CallListManual(System.Collections.Generic.List`1[int]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; partially interruptible
+
+G_M000_IG01:
+       push     rbp
+       sub      rsp, 112
+       lea      rbp, [rsp+0x70]
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       xor      eax, eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      dword ptr [rbp-0x48], 0x3E8
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp+0x10]
+       call     [InliningEhProof.Subjects:ListManual(System.Collections.Generic.List`1[int]):int]
+       add      eax, dword ptr [rbp-0x3C]
+       mov      dword ptr [rbp-0x3C], eax
+       mov      eax, dword ptr [rbp-0x40]
+       inc      eax
+       mov      dword ptr [rbp-0x40], eax
+ 
+G_M000_IG04:
+       mov      eax, dword ptr [rbp-0x48]
+       dec      eax
+       mov      dword ptr [rbp-0x48], eax
+       cmp      dword ptr [rbp-0x48], 0
+       jg       SHORT G_M000_IG06
+ 
+G_M000_IG05:
+       lea      rcx, [rbp-0x48]
+       mov      edx, 19
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG06:
+       cmp      dword ptr [rbp-0x40], 64
+       jl       SHORT G_M000_IG03
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG07:
+       add      rsp, 112
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 138
+
+; Assembly listing for method InliningEhProof.Subjects:CallListForeachBlocked(System.Collections.Generic.List`1[int]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; partially interruptible
+
+G_M000_IG01:
+       push     rbp
+       sub      rsp, 112
+       lea      rbp, [rsp+0x70]
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       xor      eax, eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      dword ptr [rbp-0x48], 0x3E8
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp+0x10]
+       call     [InliningEhProof.Subjects:ListForeachBlocked(System.Collections.Generic.List`1[int]):int]
+       add      eax, dword ptr [rbp-0x3C]
+       mov      dword ptr [rbp-0x3C], eax
+       mov      eax, dword ptr [rbp-0x40]
+       inc      eax
+       mov      dword ptr [rbp-0x40], eax
+ 
+G_M000_IG04:
+       mov      eax, dword ptr [rbp-0x48]
+       dec      eax
+       mov      dword ptr [rbp-0x48], eax
+       cmp      dword ptr [rbp-0x48], 0
+       jg       SHORT G_M000_IG06
+ 
+G_M000_IG05:
+       lea      rcx, [rbp-0x48]
+       mov      edx, 19
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG06:
+       cmp      dword ptr [rbp-0x40], 64
+       jl       SHORT G_M000_IG03
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG07:
+       add      rsp, 112
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 138
+
+; Assembly listing for method InliningEhProof.Subjects:CallListManualBlocked(System.Collections.Generic.List`1[int]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; partially interruptible
+
+G_M000_IG01:
+       push     rbp
+       sub      rsp, 112
+       lea      rbp, [rsp+0x70]
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      dword ptr [rbp-0x3C], eax
+       xor      eax, eax
+       mov      dword ptr [rbp-0x40], eax
+       mov      dword ptr [rbp-0x48], 0x3E8
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp+0x10]
+       call     [InliningEhProof.Subjects:ListManualBlocked(System.Collections.Generic.List`1[int]):int]
+       add      eax, dword ptr [rbp-0x3C]
+       mov      dword ptr [rbp-0x3C], eax
+       mov      eax, dword ptr [rbp-0x40]
+       inc      eax
+       mov      dword ptr [rbp-0x40], eax
+ 
+G_M000_IG04:
+       mov      eax, dword ptr [rbp-0x48]
+       dec      eax
+       mov      dword ptr [rbp-0x48], eax
+       cmp      dword ptr [rbp-0x48], 0
+       jg       SHORT G_M000_IG06
+ 
+G_M000_IG05:
+       lea      rcx, [rbp-0x48]
+       mov      edx, 19
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG06:
+       cmp      dword ptr [rbp-0x40], 64
+       jl       SHORT G_M000_IG03
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG07:
+       add      rsp, 112
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 138
+
+; Assembly listing for method InliningEhProof.Subjects:CallElementFinally(int[]):int (Tier1)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Tier1 code
+; optimized code
+; optimized using Dynamic PGO
+; rsp based frame
+; partially interruptible
+; with Dynamic PGO: fgCalledCount is 19280
+
+G_M000_IG01:
+       push     rdi
+       push     rsi
+       push     rbp
+       push     rbx
+       sub      rsp, 40
+       mov      rbx, rcx
+ 
+G_M000_IG02:
+       xor      esi, esi
+       xor      edi, edi
+       mov      ebp, dword ptr [rbx+0x08]
+       test     ebp, ebp
+       jle      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, rbx
+       mov      edx, edi
+       call     [InliningEhProof.Subjects:ElementFinally(int[],int):int]
+       add      esi, eax
+       inc      edi
+       cmp      ebp, edi
+       jg       SHORT G_M000_IG03
+ 
+G_M000_IG04:
+       mov      eax, esi
+ 
+G_M000_IG05:
+       add      rsp, 40
+       pop      rbx
+       pop      rbp
+       pop      rsi
+       pop      rdi
+       ret      
+ 
+; Total bytes of code 52
+
+; Assembly listing for method InliningEhProof.Subjects:CallElementPlain(int[]):int (Tier1)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Tier1 code
+; optimized code
+; optimized using Dynamic PGO
+; rsp based frame
+; fully interruptible
+; with Dynamic PGO: fgCalledCount is 20748
+; 0 inlinees with PGO data; 1 single block inlinees; 0 inlinees without PGO data
+
+G_M000_IG01:
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      edx, dword ptr [rcx+0x08]
+       test     edx, edx
+       jle      SHORT G_M000_IG05
+ 
+G_M000_IG03:
+       mov      r8, 0xD1FFAB1E
+       add      rcx, 16
+       align    [9 bytes for IG04]
+ 
+G_M000_IG04:
+       mov      r10d, dword ptr [rcx]
+       inc      dword ptr [r8]
+       add      eax, r10d
+       add      rcx, 4
+       dec      edx
+       jne      SHORT G_M000_IG04
+ 
+G_M000_IG05:
+       ret      
+ 
+; Total bytes of code 50
+
+; Assembly listing for method InliningEhProof.Subjects:CallElementFinallyBlocked(int[]):int (Tier1)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Tier1 code
+; optimized code
+; optimized using Dynamic PGO
+; rsp based frame
+; partially interruptible
+; with Dynamic PGO: fgCalledCount is 22048
+
+G_M000_IG01:
+       push     rdi
+       push     rsi
+       push     rbp
+       push     rbx
+       sub      rsp, 40
+       mov      rbx, rcx
+ 
+G_M000_IG02:
+       xor      esi, esi
+       xor      edi, edi
+       mov      ebp, dword ptr [rbx+0x08]
+       test     ebp, ebp
+       jle      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, rbx
+       mov      edx, edi
+       call     [InliningEhProof.Subjects:ElementFinallyBlocked(int[],int):int]
+       add      esi, eax
+       inc      edi
+       cmp      ebp, edi
+       jg       SHORT G_M000_IG03
+ 
+G_M000_IG04:
+       mov      eax, esi
+ 
+G_M000_IG05:
+       add      rsp, 40
+       pop      rbx
+       pop      rbp
+       pop      rsi
+       pop      rdi
+       ret      
+ 
+; Total bytes of code 52
+
+; Assembly listing for method InliningEhProof.Subjects:CallElementPlainBlocked(int[]):int (Tier1)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Tier1 code
+; optimized code
+; optimized using Dynamic PGO
+; rsp based frame
+; partially interruptible
+; with Dynamic PGO: fgCalledCount is 23208
+
+G_M000_IG01:
+       push     rdi
+       push     rsi
+       push     rbp
+       push     rbx
+       sub      rsp, 40
+       mov      rbx, rcx
+ 
+G_M000_IG02:
+       xor      esi, esi
+       xor      edi, edi
+       mov      ebp, dword ptr [rbx+0x08]
+       test     ebp, ebp
+       jle      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, rbx
+       mov      edx, edi
+       call     [InliningEhProof.Subjects:ElementPlainBlocked(int[],int):int]
+       add      esi, eax
+       inc      edi
+       cmp      ebp, edi
+       jg       SHORT G_M000_IG03
+ 
+G_M000_IG04:
+       mov      eax, esi
+ 
+G_M000_IG05:
+       add      rsp, 40
+       pop      rbx
+       pop      rbp
+       pop      rsi
+       pop      rdi
+       ret      
+ 
+; Total bytes of code 52
+
+; Assembly listing for method InliningEhProof.Subjects:CallElementGuardFinally(int[]):int (Tier1)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Tier1 code
+; optimized code
+; optimized using Dynamic PGO
+; rsp based frame
+; partially interruptible
+; with Dynamic PGO: fgCalledCount is 24200
+
+G_M000_IG01:
+       push     rdi
+       push     rsi
+       push     rbp
+       push     rbx
+       sub      rsp, 40
+       mov      rbx, rcx
+ 
+G_M000_IG02:
+       xor      esi, esi
+       xor      edi, edi
+       mov      ebp, dword ptr [rbx+0x08]
+       test     ebp, ebp
+       jle      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, rbx
+       mov      edx, edi
+       call     [InliningEhProof.Subjects:ElementGuardFinally(int[],int):int]
+       add      esi, eax
+       inc      edi
+       cmp      ebp, edi
+       jg       SHORT G_M000_IG03
+ 
+G_M000_IG04:
+       mov      eax, esi
+ 
+G_M000_IG05:
+       add      rsp, 40
+       pop      rbx
+       pop      rbp
+       pop      rsi
+       pop      rdi
+       ret      
+ 
+; Total bytes of code 52
+
+; Assembly listing for method InliningEhProof.Subjects:CallElementGuardPlain(int[]):int (Tier1)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Tier1 code
+; optimized code
+; optimized using Dynamic PGO
+; rsp based frame
+; fully interruptible
+; with Dynamic PGO: fgCalledCount is 25696
+; 0 inlinees with PGO data; 0 single block inlinees; 1 inlinees without PGO data
+
+G_M000_IG01:
+       push     rbx
+       sub      rsp, 32
+ 
+G_M000_IG02:
+       xor      eax, eax
+       xor      edx, edx
+       mov      r8d, dword ptr [rcx+0x08]
+       test     r8d, r8d
+       jle      SHORT G_M000_IG04
+       align    [14 bytes for IG03]
+ 
+G_M000_IG03:
+       mov      r10d, dword ptr [rcx+4*rdx+0x10]
+       test     edx, edx
+       jl       SHORT G_M000_IG05
+       add      eax, r10d
+       inc      edx
+       cmp      r8d, edx
+       jg       SHORT G_M000_IG03
+ 
+G_M000_IG04:
+       add      rsp, 32
+       pop      rbx
+       ret      
+ 
+G_M000_IG05:
+       mov      rcx, 0xD1FFAB1E
+       call     CORINFO_HELP_NEWSFAST
+       mov      rbx, rax
+       mov      ecx, 1
+       mov      rdx, 0xD1FFAB1E
+       call     CORINFO_HELP_STRCNS
+       mov      rdx, rax
+       mov      rcx, rbx
+       call     [System.InvalidOperationException:.ctor(System.String):this]
+       mov      rcx, rbx
+       call     CORINFO_HELP_THROW
+       int3     
+ 
+; Total bytes of code 116
+
+; Assembly listing for method InliningEhProof.Subjects:CallElementGuardFinallyBlocked(int[]):int (Tier1)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Tier1 code
+; optimized code
+; optimized using Dynamic PGO
+; rsp based frame
+; partially interruptible
+; with Dynamic PGO: fgCalledCount is 27272
+
+G_M000_IG01:
+       push     rdi
+       push     rsi
+       push     rbp
+       push     rbx
+       sub      rsp, 40
+       mov      rbx, rcx
+ 
+G_M000_IG02:
+       xor      esi, esi
+       xor      edi, edi
+       mov      ebp, dword ptr [rbx+0x08]
+       test     ebp, ebp
+       jle      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, rbx
+       mov      edx, edi
+       call     [InliningEhProof.Subjects:ElementGuardFinallyBlocked(int[],int):int]
+       add      esi, eax
+       inc      edi
+       cmp      ebp, edi
+       jg       SHORT G_M000_IG03
+ 
+G_M000_IG04:
+       mov      eax, esi
+ 
+G_M000_IG05:
+       add      rsp, 40
+       pop      rbx
+       pop      rbp
+       pop      rsi
+       pop      rdi
+       ret      
+ 
+; Total bytes of code 52
+
+; Assembly listing for method InliningEhProof.Subjects:CallElementGuardPlainBlocked(int[]):int (Tier1)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Tier1 code
+; optimized code
+; optimized using Dynamic PGO
+; rsp based frame
+; partially interruptible
+; with Dynamic PGO: fgCalledCount is 28604
+
+G_M000_IG01:
+       push     rdi
+       push     rsi
+       push     rbp
+       push     rbx
+       sub      rsp, 40
+       mov      rbx, rcx
+ 
+G_M000_IG02:
+       xor      esi, esi
+       xor      edi, edi
+       mov      ebp, dword ptr [rbx+0x08]
+       test     ebp, ebp
+       jle      SHORT G_M000_IG04
+ 
+G_M000_IG03:
+       mov      rcx, rbx
+       mov      edx, edi
+       call     [InliningEhProof.Subjects:ElementGuardPlainBlocked(int[],int):int]
+       add      esi, eax
+       inc      edi
+       cmp      ebp, edi
+       jg       SHORT G_M000_IG03
+ 
+G_M000_IG04:
+       mov      eax, esi
+ 
+G_M000_IG05:
+       add      rsp, 40
+       pop      rbx
+       pop      rbp
+       pop      rsi
+       pop      rdi
+       ret      
+ 
+; Total bytes of code 52
+
+; Assembly listing for method InliningEhProof.Subjects:CallListForeach(System.Collections.Generic.List`1[int]):int (Tier1)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Tier1 code
+; optimized code
+; optimized using Dynamic PGO
+; rsp based frame
+; partially interruptible
+; with Dynamic PGO: fgCalledCount is 29944
+
+G_M000_IG01:
+       push     rdi
+       push     rsi
+       push     rbx
+       sub      rsp, 32
+       mov      rbx, rcx
+ 
+G_M000_IG02:
+       xor      esi, esi
+       mov      edi, 64
+ 
+G_M000_IG03:
+       mov      rcx, rbx
+       call     [InliningEhProof.Subjects:ListForeach(System.Collections.Generic.List`1[int]):int]
+       add      esi, eax
+       dec      edi
+       jne      SHORT G_M000_IG03
+ 
+G_M000_IG04:
+       mov      eax, esi
+ 
+G_M000_IG05:
+       add      rsp, 32
+       pop      rbx
+       pop      rsi
+       pop      rdi
+       ret      
+ 
+; Total bytes of code 42
+
+; Assembly listing for method InliningEhProof.Subjects:CallListManual(System.Collections.Generic.List`1[int]):int (Tier1)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Tier1 code
+; optimized code
+; optimized using Dynamic PGO
+; rsp based frame
+; fully interruptible
+; with Dynamic PGO: fgCalledCount is 31096
+; 3 inlinees with PGO data; 4 single block inlinees; 0 inlinees without PGO data
+
+G_M000_IG01:
+       sub      rsp, 40
+ 
+G_M000_IG02:
+       xor      eax, eax
+       mov      edx, 64
+ 
+G_M000_IG03:
+       mov      r8, rcx
+       mov      r8d, dword ptr [r8+0x14]
+       xor      r8d, r8d
+       xor      r10d, r10d
+       jmp      SHORT G_M000_IG05
+       align    [6 bytes for IG04]
+ 
+G_M000_IG04:
+       mov      r9, gword ptr [rcx+0x08]
+       cmp      r10d, dword ptr [r9+0x08]
+       jae      SHORT G_M000_IG08
+       mov      r9d, dword ptr [r9+4*r10+0x10]
+       inc      r10d
+       add      r8d, r9d
+ 
+G_M000_IG05:
+       cmp      r10d, dword ptr [rcx+0x10]
+       jb       SHORT G_M000_IG04
+ 
+G_M000_IG06:
+       mov      r10, 0xD1FFAB1E
+       inc      dword ptr [r10]
+       add      eax, r8d
+       dec      edx
+       jne      SHORT G_M000_IG03
+ 
+G_M000_IG07:
+       add      rsp, 40
+       ret      
+ 
+G_M000_IG08:
+       call     CORINFO_HELP_RNGCHKFAIL
+       int3     
+ 
+; Total bytes of code 90
+
+; Assembly listing for method InliningEhProof.Subjects:CallListForeachBlocked(System.Collections.Generic.List`1[int]):int (Tier1)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Tier1 code
+; optimized code
+; optimized using Dynamic PGO
+; rsp based frame
+; partially interruptible
+; with Dynamic PGO: fgCalledCount is 33280
+
+G_M000_IG01:
+       push     rdi
+       push     rsi
+       push     rbx
+       sub      rsp, 32
+       mov      rbx, rcx
+ 
+G_M000_IG02:
+       xor      esi, esi
+       mov      edi, 64
+ 
+G_M000_IG03:
+       mov      rcx, rbx
+       call     [InliningEhProof.Subjects:ListForeachBlocked(System.Collections.Generic.List`1[int]):int]
+       add      esi, eax
+       dec      edi
+       jne      SHORT G_M000_IG03
+ 
+G_M000_IG04:
+       mov      eax, esi
+ 
+G_M000_IG05:
+       add      rsp, 32
+       pop      rbx
+       pop      rsi
+       pop      rdi
+       ret      
+ 
+; Total bytes of code 42
+
+; Assembly listing for method InliningEhProof.Subjects:CallListManualBlocked(System.Collections.Generic.List`1[int]):int (Tier1)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Tier1 code
+; optimized code
+; optimized using Dynamic PGO
+; rsp based frame
+; partially interruptible
+; with Dynamic PGO: fgCalledCount is 35184
+
+G_M000_IG01:
+       push     rdi
+       push     rsi
+       push     rbx
+       sub      rsp, 32
+       mov      rbx, rcx
+ 
+G_M000_IG02:
+       xor      esi, esi
+       mov      edi, 64
+ 
+G_M000_IG03:
+       mov      rcx, rbx
+       call     [InliningEhProof.Subjects:ListManualBlocked(System.Collections.Generic.List`1[int]):int]
+       add      esi, eax
+       dec      edi
+       jne      SHORT G_M000_IG03
+ 
+G_M000_IG04:
+       mov      eax, esi
+ 
+G_M000_IG05:
+       add      rsp, 32
+       pop      rbx
+       pop      rsi
+       pop      rdi
+       ret      
+ 
+; Total bytes of code 42
+
+264000000

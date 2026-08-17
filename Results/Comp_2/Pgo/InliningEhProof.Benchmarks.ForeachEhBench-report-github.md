@@ -1,0 +1,52 @@
+```
+
+BenchmarkDotNet v0.15.8, Windows 10 (10.0.19045.6466/22H2/2022Update)
+Intel Core i9-10900KF CPU 3.70GHz, 1 CPU, 20 logical and 10 physical cores
+.NET SDK 11.0.100-preview.5.26302.115
+  [Host]    : .NET 10.0.10 (10.0.10, 10.0.1026.32716), X64 RyuJIT x86-64-v3
+  .NET 10.0 : .NET 10.0.10 (10.0.10, 10.0.1026.32716), X64 RyuJIT x86-64-v3
+  .NET 8.0  : .NET 8.0.29 (8.0.29, 8.0.2926.32403), X64 RyuJIT x86-64-v3
+  .NET 9.0  : .NET 9.0.18 (9.0.18, 9.0.1826.31522), X64 RyuJIT x86-64-v3
+
+
+```
+| Method                  | Job       | Runtime   | Elements | Mean       | Error    | StdDev   | Ratio | RatioSD | Allocated | Alloc Ratio |
+|------------------------ |---------- |---------- |--------- |-----------:|---------:|---------:|------:|--------:|----------:|------------:|
+| **Foreach_Compiler**        | **.NET 10.0** | **.NET 10.0** | **4**        |   **188.3 ns** |  **2.02 ns** |  **1.69 ns** |  **1.00** |    **0.01** |         **-** |          **NA** |
+| Foreach_Manual          | .NET 10.0 | .NET 10.0 | 4        |   127.5 ns |  1.17 ns |  1.09 ns |  0.68 |    0.01 |         - |          NA |
+| Foreach_CompilerBlocked | .NET 10.0 | .NET 10.0 | 4        |   271.7 ns |  2.20 ns |  2.06 ns |  1.44 |    0.02 |         - |          NA |
+| Foreach_ManualBlocked   | .NET 10.0 | .NET 10.0 | 4        |   270.5 ns |  1.23 ns |  1.15 ns |  1.44 |    0.01 |         - |          NA |
+| Foreach_Compiler        | .NET 8.0  | .NET 8.0  | 4        |   223.4 ns |  2.20 ns |  2.06 ns |  1.19 |    0.01 |         - |          NA |
+| Foreach_Manual          | .NET 8.0  | .NET 8.0  | 4        |   179.4 ns |  0.77 ns |  0.68 ns |  0.95 |    0.01 |         - |          NA |
+| Foreach_CompilerBlocked | .NET 8.0  | .NET 8.0  | 4        |   225.5 ns |  4.09 ns |  3.82 ns |  1.20 |    0.02 |         - |          NA |
+| Foreach_ManualBlocked   | .NET 8.0  | .NET 8.0  | 4        |   210.1 ns |  3.16 ns |  2.95 ns |  1.12 |    0.02 |         - |          NA |
+| Foreach_Compiler        | .NET 9.0  | .NET 9.0  | 4        |   273.6 ns |  2.74 ns |  2.56 ns |  1.45 |    0.02 |         - |          NA |
+| Foreach_Manual          | .NET 9.0  | .NET 9.0  | 4        |   129.9 ns |  0.77 ns |  0.69 ns |  0.69 |    0.01 |         - |          NA |
+| Foreach_CompilerBlocked | .NET 9.0  | .NET 9.0  | 4        |   206.6 ns |  2.96 ns |  2.77 ns |  1.10 |    0.02 |         - |          NA |
+| Foreach_ManualBlocked   | .NET 9.0  | .NET 9.0  | 4        |   203.6 ns |  3.37 ns |  3.15 ns |  1.08 |    0.02 |         - |          NA |
+|                         |           |           |          |            |          |          |       |         |           |             |
+| **Foreach_Compiler**        | **.NET 10.0** | **.NET 10.0** | **16**       |   **457.0 ns** |  **5.42 ns** |  **5.07 ns** |  **1.00** |    **0.02** |         **-** |          **NA** |
+| Foreach_Manual          | .NET 10.0 | .NET 10.0 | 16       |   449.1 ns |  5.61 ns |  5.25 ns |  0.98 |    0.02 |         - |          NA |
+| Foreach_CompilerBlocked | .NET 10.0 | .NET 10.0 | 16       |   573.3 ns |  8.57 ns |  8.02 ns |  1.25 |    0.02 |         - |          NA |
+| Foreach_ManualBlocked   | .NET 10.0 | .NET 10.0 | 16       |   566.1 ns |  9.22 ns |  8.63 ns |  1.24 |    0.02 |         - |          NA |
+| Foreach_Compiler        | .NET 8.0  | .NET 8.0  | 16       |   545.3 ns |  5.16 ns |  4.57 ns |  1.19 |    0.02 |         - |          NA |
+| Foreach_Manual          | .NET 8.0  | .NET 8.0  | 16       |   511.3 ns |  3.30 ns |  2.75 ns |  1.12 |    0.01 |         - |          NA |
+| Foreach_CompilerBlocked | .NET 8.0  | .NET 8.0  | 16       |   542.5 ns |  8.55 ns |  8.00 ns |  1.19 |    0.02 |         - |          NA |
+| Foreach_ManualBlocked   | .NET 8.0  | .NET 8.0  | 16       |   547.8 ns |  5.60 ns |  4.96 ns |  1.20 |    0.02 |         - |          NA |
+| Foreach_Compiler        | .NET 9.0  | .NET 9.0  | 16       |   454.9 ns |  2.04 ns |  1.91 ns |  1.00 |    0.01 |         - |          NA |
+| Foreach_Manual          | .NET 9.0  | .NET 9.0  | 16       |   440.1 ns |  4.76 ns |  4.46 ns |  0.96 |    0.01 |         - |          NA |
+| Foreach_CompilerBlocked | .NET 9.0  | .NET 9.0  | 16       |   457.2 ns |  2.91 ns |  2.72 ns |  1.00 |    0.01 |         - |          NA |
+| Foreach_ManualBlocked   | .NET 9.0  | .NET 9.0  | 16       |   573.3 ns |  1.47 ns |  1.37 ns |  1.25 |    0.01 |         - |          NA |
+|                         |           |           |          |            |          |          |       |         |           |             |
+| **Foreach_Compiler**        | **.NET 10.0** | **.NET 10.0** | **64**       | **2,073.2 ns** | **19.40 ns** | **18.14 ns** |  **1.00** |    **0.01** |         **-** |          **NA** |
+| Foreach_Manual          | .NET 10.0 | .NET 10.0 | 64       | 2,009.8 ns | 18.20 ns | 17.02 ns |  0.97 |    0.01 |         - |          NA |
+| Foreach_CompilerBlocked | .NET 10.0 | .NET 10.0 | 64       | 2,127.9 ns | 17.89 ns | 16.73 ns |  1.03 |    0.01 |         - |          NA |
+| Foreach_ManualBlocked   | .NET 10.0 | .NET 10.0 | 64       | 2,108.0 ns | 16.17 ns | 14.34 ns |  1.02 |    0.01 |         - |          NA |
+| Foreach_Compiler        | .NET 8.0  | .NET 8.0  | 64       | 2,409.3 ns | 31.13 ns | 29.12 ns |  1.16 |    0.02 |         - |          NA |
+| Foreach_Manual          | .NET 8.0  | .NET 8.0  | 64       | 2,407.1 ns | 28.68 ns | 26.82 ns |  1.16 |    0.02 |         - |          NA |
+| Foreach_CompilerBlocked | .NET 8.0  | .NET 8.0  | 64       | 2,407.2 ns | 18.85 ns | 17.63 ns |  1.16 |    0.01 |         - |          NA |
+| Foreach_ManualBlocked   | .NET 8.0  | .NET 8.0  | 64       | 2,360.1 ns |  4.53 ns |  4.01 ns |  1.14 |    0.01 |         - |          NA |
+| Foreach_Compiler        | .NET 9.0  | .NET 9.0  | 64       | 2,049.9 ns |  7.14 ns |  6.68 ns |  0.99 |    0.01 |         - |          NA |
+| Foreach_Manual          | .NET 9.0  | .NET 9.0  | 64       | 2,012.8 ns | 19.90 ns | 18.62 ns |  0.97 |    0.01 |         - |          NA |
+| Foreach_CompilerBlocked | .NET 9.0  | .NET 9.0  | 64       | 2,058.0 ns | 10.98 ns | 10.27 ns |  0.99 |    0.01 |         - |          NA |
+| Foreach_ManualBlocked   | .NET 9.0  | .NET 9.0  | 64       | 2,090.0 ns |  4.18 ns |  3.71 ns |  1.01 |    0.01 |         - |          NA |

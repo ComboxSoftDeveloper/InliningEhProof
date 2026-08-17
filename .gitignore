@@ -1,0 +1,9 @@
+bin/
+obj/
+.vs/
+BenchmarkDotNet.Artifacts/
+BenchmarkDotNet.Artifacts.NoPgo/
+checks_net*.txt
+timing_net*.txt
+Disasm/disasm_*.txt
+*.suo

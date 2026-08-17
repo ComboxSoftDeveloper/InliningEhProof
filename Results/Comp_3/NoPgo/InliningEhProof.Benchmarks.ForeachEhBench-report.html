@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>InliningEhProof.Benchmarks.ForeachEhBench-20260806-143423</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.15.8, Windows 10 (10.0.20348.5386)
+Intel Xeon Silver 4314 CPU 2.40GHz, 2 CPU, 64 logical and 32 physical cores
+.NET SDK 11.0.100-preview.5.26302.115
+  [Host]    : .NET 10.0.1 (10.0.1, 10.0.125.57005), X64 RyuJIT x86-64-v4
+  .NET 10.0 : .NET 10.0.1 (10.0.1, 10.0.125.57005), X64 RyuJIT x86-64-v4
+  .NET 8.0  : .NET 8.0.16 (8.0.16, 8.0.1625.21506), X64 RyuJIT x86-64-v4
+  .NET 9.0  : .NET 9.0.5 (9.0.5, 9.0.525.21509), X64 RyuJIT x86-64-v4
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method           </th><th>Job</th><th>Runtime</th><th>Elements</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Ratio</th><th>Allocated</th><th>Alloc Ratio</th>
+</tr>
+</thead><tbody><tr><td>Foreach_Compiler</td><td>.NET 10.0</td><td>.NET 10.0</td><td>4</td><td>390.1 ns</td><td>1.90 ns</td><td>1.48 ns</td><td>1.00</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_Manual</td><td>.NET 10.0</td><td>.NET 10.0</td><td>4</td><td>396.0 ns</td><td>3.80 ns</td><td>3.56 ns</td><td>1.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_CompilerBlocked</td><td>.NET 10.0</td><td>.NET 10.0</td><td>4</td><td>394.2 ns</td><td>4.18 ns</td><td>3.71 ns</td><td>1.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_ManualBlocked</td><td>.NET 10.0</td><td>.NET 10.0</td><td>4</td><td>401.0 ns</td><td>2.86 ns</td><td>2.68 ns</td><td>1.03</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_Compiler</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>360.8 ns</td><td>2.30 ns</td><td>2.15 ns</td><td>0.92</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_Manual</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>398.2 ns</td><td>2.49 ns</td><td>2.33 ns</td><td>1.02</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_CompilerBlocked</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>399.4 ns</td><td>1.22 ns</td><td>1.08 ns</td><td>1.02</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_ManualBlocked</td><td>.NET 8.0</td><td>.NET 8.0</td><td>4</td><td>397.6 ns</td><td>1.55 ns</td><td>1.37 ns</td><td>1.02</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_Compiler</td><td>.NET 9.0</td><td>.NET 9.0</td><td>4</td><td>396.0 ns</td><td>3.69 ns</td><td>3.27 ns</td><td>1.02</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_Manual</td><td>.NET 9.0</td><td>.NET 9.0</td><td>4</td><td>397.5 ns</td><td>5.53 ns</td><td>5.17 ns</td><td>1.02</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_CompilerBlocked</td><td>.NET 9.0</td><td>.NET 9.0</td><td>4</td><td>399.9 ns</td><td>5.86 ns</td><td>5.19 ns</td><td>1.02</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_ManualBlocked</td><td>.NET 9.0</td><td>.NET 9.0</td><td>4</td><td>389.9 ns</td><td>1.30 ns</td><td>1.08 ns</td><td>1.00</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_Compiler</td><td>.NET 10.0</td><td>.NET 10.0</td><td>16</td><td>788.6 ns</td><td>3.34 ns</td><td>3.12 ns</td><td>1.00</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_Manual</td><td>.NET 10.0</td><td>.NET 10.0</td><td>16</td><td>792.7 ns</td><td>6.50 ns</td><td>6.08 ns</td><td>1.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_CompilerBlocked</td><td>.NET 10.0</td><td>.NET 10.0</td><td>16</td><td>795.5 ns</td><td>3.95 ns</td><td>3.70 ns</td><td>1.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_ManualBlocked</td><td>.NET 10.0</td><td>.NET 10.0</td><td>16</td><td>799.8 ns</td><td>4.07 ns</td><td>3.81 ns</td><td>1.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_Compiler</td><td>.NET 8.0</td><td>.NET 8.0</td><td>16</td><td>849.2 ns</td><td>4.53 ns</td><td>4.24 ns</td><td>1.08</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_Manual</td><td>.NET 8.0</td><td>.NET 8.0</td><td>16</td><td>915.6 ns</td><td>4.15 ns</td><td>3.68 ns</td><td>1.16</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_CompilerBlocked</td><td>.NET 8.0</td><td>.NET 8.0</td><td>16</td><td>921.5 ns</td><td>8.90 ns</td><td>8.33 ns</td><td>1.17</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_ManualBlocked</td><td>.NET 8.0</td><td>.NET 8.0</td><td>16</td><td>937.7 ns</td><td>10.24 ns</td><td>9.58 ns</td><td>1.19</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_Compiler</td><td>.NET 9.0</td><td>.NET 9.0</td><td>16</td><td>802.2 ns</td><td>5.45 ns</td><td>4.83 ns</td><td>1.02</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_Manual</td><td>.NET 9.0</td><td>.NET 9.0</td><td>16</td><td>792.4 ns</td><td>6.89 ns</td><td>6.11 ns</td><td>1.00</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_CompilerBlocked</td><td>.NET 9.0</td><td>.NET 9.0</td><td>16</td><td>791.0 ns</td><td>4.36 ns</td><td>3.87 ns</td><td>1.00</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_ManualBlocked</td><td>.NET 9.0</td><td>.NET 9.0</td><td>16</td><td>788.0 ns</td><td>3.45 ns</td><td>3.23 ns</td><td>1.00</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_Compiler</td><td>.NET 10.0</td><td>.NET 10.0</td><td>64</td><td>2,964.6 ns</td><td>17.72 ns</td><td>15.70 ns</td><td>1.00</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_Manual</td><td>.NET 10.0</td><td>.NET 10.0</td><td>64</td><td>3,079.9 ns</td><td>20.29 ns</td><td>17.99 ns</td><td>1.04</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_CompilerBlocked</td><td>.NET 10.0</td><td>.NET 10.0</td><td>64</td><td>2,991.7 ns</td><td>17.39 ns</td><td>15.42 ns</td><td>1.01</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_ManualBlocked</td><td>.NET 10.0</td><td>.NET 10.0</td><td>64</td><td>2,955.9 ns</td><td>18.99 ns</td><td>17.76 ns</td><td>1.00</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_Compiler</td><td>.NET 8.0</td><td>.NET 8.0</td><td>64</td><td>3,024.9 ns</td><td>18.68 ns</td><td>17.48 ns</td><td>1.02</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_Manual</td><td>.NET 8.0</td><td>.NET 8.0</td><td>64</td><td>3,131.4 ns</td><td>39.36 ns</td><td>36.82 ns</td><td>1.06</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_CompilerBlocked</td><td>.NET 8.0</td><td>.NET 8.0</td><td>64</td><td>3,131.4 ns</td><td>21.03 ns</td><td>18.64 ns</td><td>1.06</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_ManualBlocked</td><td>.NET 8.0</td><td>.NET 8.0</td><td>64</td><td>3,122.8 ns</td><td>11.25 ns</td><td>9.39 ns</td><td>1.05</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_Compiler</td><td>.NET 9.0</td><td>.NET 9.0</td><td>64</td><td>3,011.2 ns</td><td>27.32 ns</td><td>25.56 ns</td><td>1.02</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_Manual</td><td>.NET 9.0</td><td>.NET 9.0</td><td>64</td><td>2,944.0 ns</td><td>13.09 ns</td><td>10.93 ns</td><td>0.99</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_CompilerBlocked</td><td>.NET 9.0</td><td>.NET 9.0</td><td>64</td><td>2,947.4 ns</td><td>11.81 ns</td><td>9.86 ns</td><td>0.99</td><td>-</td><td>NA</td>
+</tr><tr><td>Foreach_ManualBlocked</td><td>.NET 9.0</td><td>.NET 9.0</td><td>64</td><td>2,957.7 ns</td><td>21.18 ns</td><td>19.81 ns</td><td>1.00</td><td>-</td><td>NA</td>
+</tr></tbody></table>
+</body>
+</html>
