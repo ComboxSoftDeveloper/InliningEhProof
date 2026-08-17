@@ -1,0 +1,43 @@
+Runtime: 9.0.4
+Обходов списка за операцию: 64
+Прогрев 2000 мс, замер 3000 мс на способ
+
+Способ                     Элементов   Вызовов    На вызов, нс
+Element_Finally                    4         4           11,80
+Element_Plain                      4         4            5,25
+Element_FinallyBlocked             4         4           12,05
+Element_PlainBlocked               4         4            8,98
+Guard_Finally                      4         4           10,03
+Guard_Plain                        4         4            3,01
+Guard_FinallyBlocked               4         4            9,05
+Guard_PlainBlocked                 4         4            8,44
+Foreach_Compiler                   4        64          286,14
+Foreach_Manual                     4        64          174,67
+Foreach_CompilerBlocked            4        64          298,84
+Foreach_ManualBlocked              4        64          276,09
+Element_Finally                   16        16           43,69
+Element_Plain                     16        16           23,45
+Element_FinallyBlocked            16        16           43,31
+Element_PlainBlocked              16        16           29,89
+Guard_Finally                     16        16           35,40
+Guard_Plain                       16        16            6,63
+Guard_FinallyBlocked              16        16           31,66
+Guard_PlainBlocked                16        16           30,45
+Foreach_Compiler                  16        64          593,76
+Foreach_Manual                    16        64          573,11
+Foreach_CompilerBlocked           16        64          690,08
+Foreach_ManualBlocked             16        64          594,71
+Element_Finally                   64        64          179,37
+Element_Plain                     64        64           91,32
+Element_FinallyBlocked            64        64          182,23
+Element_PlainBlocked              64        64          126,47
+Guard_Finally                     64        64          142,97
+Guard_Plain                       64        64           34,53
+Guard_FinallyBlocked              64        64          123,54
+Guard_PlainBlocked                64        64          119,25
+Foreach_Compiler                  64        64         2097,82
+Foreach_Manual                    64        64         2087,87
+Foreach_CompilerBlocked           64        64         2192,48
+Foreach_ManualBlocked             64        64         2142,81
+
+Контрольная сумма: 133120

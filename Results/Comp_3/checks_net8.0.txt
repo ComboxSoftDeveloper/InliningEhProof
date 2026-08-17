@@ -1,0 +1,43 @@
+Runtime: 8.0.16
+Обходов списка за операцию: 64
+
+Способ                     Элементов         Ответ     Ожидалось
+Element_Finally                    4            10            10
+Element_Plain                      4            10            10
+Element_FinallyBlocked             4            10            10
+Element_PlainBlocked               4            10            10
+Guard_Finally                      4            10            10
+Guard_Plain                        4            10            10
+Guard_FinallyBlocked               4            10            10
+Guard_PlainBlocked                 4            10            10
+Foreach_Compiler                   4           640           640
+Foreach_Manual                     4           640           640
+Foreach_CompilerBlocked            4           640           640
+Foreach_ManualBlocked              4           640           640
+Element_Finally                   16           136           136
+Element_Plain                     16           136           136
+Element_FinallyBlocked            16           136           136
+Element_PlainBlocked              16           136           136
+Guard_Finally                     16           136           136
+Guard_Plain                       16           136           136
+Guard_FinallyBlocked              16           136           136
+Guard_PlainBlocked                16           136           136
+Foreach_Compiler                  16          8704          8704
+Foreach_Manual                    16          8704          8704
+Foreach_CompilerBlocked           16          8704          8704
+Foreach_ManualBlocked             16          8704          8704
+Element_Finally                   64          2080          2080
+Element_Plain                     64          2080          2080
+Element_FinallyBlocked            64          2080          2080
+Element_PlainBlocked              64          2080          2080
+Guard_Finally                     64          2080          2080
+Guard_Plain                       64          2080          2080
+Guard_FinallyBlocked              64          2080          2080
+Guard_PlainBlocked                64          2080          2080
+Foreach_Compiler                  64        133120        133120
+Foreach_Manual                    64        133120        133120
+Foreach_CompilerBlocked           64        133120        133120
+Foreach_ManualBlocked             64        133120        133120
+
+Обращений к счётчику: 1104
+Сверка прошла.
